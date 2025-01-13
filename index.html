@@ -12,30 +12,36 @@
 
 <body>
     <div id="topbar"
-        class="flex flex-row flex-nowrap flex-1 justify-items-stretch px-4 w-full border-gray-300 border-b-2 p-4">
+        class="flex flex-row flex-nowrap flex-1 justify-items-stretch px-4 w-full border-slate-300 border-b-2 p-4">
         <div id="topbar-l" class="flex">
-            <div>
-                <select class="rounded-md" id="context-switch">
-                    <option value="default">Alicia Koch</option>
+            <div id="user" class="flex flex-row rounded-md font-bold w-60 border-2 border-slate-300">
+                <img src="icons/default-avatar.svg" alt="user" class="w-8 h-8 mx-2 self-center" />
+                <select class="appearance-none flex border-none rounded-md w-48 text-lg" id="context-switch">
+                    <option value="default" selected>
+                        Alicia Koch
+                    </option>
+                    <option value="value1">Value 1</option>
+                    <option value="value2">Value 2</option>
+                    <option value="value3">Value 3</option>
                 </select>
             </div>
             <div id="index-switch" class="inline px-2 content-center justify-center">
                 <nav>
                     <ul>
-                        <li class="inline px-2"><a href="index.html">Overview</a></li>
-                        <li class="inline px-2">Customers</li>
-                        <li class="inline px-2">Products</li>
-                        <li class="inline px-2">Setting</li>
+                        <li class="inline px-2 text-lg"><a href="index.html">Overview</a></li>
+                        <li class="inline px-2 text-lg text-gray-500">Customers</li>
+                        <li class="inline px-2 text-lg text-gray-500">Products</li>
+                        <li class="inline px-2 text-lg text-gray-500">Setting</li>
                     </ul>
                 </nav>
             </div>
         </div>
         <div id="topbar-r" class="flex ml-auto">
             <div id="search-content" class="flex items-center">
-                <input type="text" id="search" placeholder="Search..." class="rounded-md">
+                <input type="text" id="search" placeholder="Search..." class="rounded-md w-80 text-lg border-slate-300">
             </div>
             <div id="avatar" class="flex items-center pl-4">
-                <img src="default-avatar.svg" class="h-10 w-10">
+                <img src="icons/default-avatar.svg" class="h-10 w-10">
             </div>
         </div>
     </div>
@@ -50,7 +56,7 @@
             </div>
 
             <div id="download-butt" class="flex rounded-lg justify-self-end bg-black border-2 mx-2 px-4 items-center">
-                <button class="text-white flex flex-row items-center space-x-4"><img src="download-button.svg"
+                <button class="text-white flex flex-row items-center space-x-4"><img src="icons/download-button.svg"
                         class="h-5 w-5">
                     <p>Download</p>
                 </button>
@@ -72,77 +78,91 @@
             </nav>
         </div>
         <div id="info-section" class="flex flex-row m-4">
-            <div id="totalrevenue" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-4">
-                <h2 class="font-bold">Total Revenue</h2>
+            <div id="totalrevenue" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
+                <div class="flex flex-row space-between">
+                    <h2 class="flex self-center">Total Revenue</h2>
+                    <img src="icons/dollar-svgrepo-com.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
+                </div>
                 <h1 class="font-bold text-2xl pt-2">$Num</h1>
-                <p class="text-gray-500">'n' from last month</p>
+                <p class="pt-2 text-gray-500">'n' from last month</p>
             </div>
-            <div id="subscripitons" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-4">
-                <h2 class="font-bold">Subscripitone</h2>
+            <div id="subscripitons" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
+                <div class="flex flex-row space-between">
+                    <h2 class="flex self-center">Subscripitone</h2>
+                    <img src="icons/users-svgrepo-com.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
+                </div>
                 <h1 class="font-bold text-2xl pt-2">$Num</h1>
-                <p class="text-gray-500">'n' from last month</p>
+                <p class="pt-2 text-gray-500">'n' from last month</p>
             </div>
-            <div id="sales" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-4">
-                <h2 class="font-bold">Sales</h2>
+            <div id="sales" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
+                <div class="flex flex-row space-between">
+                    <h2 class="flex self-center">Sales</h2>
+                    <img src="icons/hamburger-svgrepo-com.svg"
+                        class="flex self-center w-8 h-8 justify-self-end ml-auto">
+                </div>
                 <h1 class="font-bold text-2xl pt-2">$Num</h1>
-                <p class="text-gray-500">'n' from last month</p>
+                <p class="pt-2 text-gray-500">'n' from last month</p>
             </div>
-            <div id="activenow" class="flex flex-col mr-6 rounded-lg border-2 w-1/4 p-4">
-                <h2 class="font-bold">Active Now</h2>
+            <div id="activenow" class="flex flex-col mr-6 rounded-lg border-2 w-1/4 p-6">
+                <div class="flex flex-row space-between">
+                    <h2 class="flex self-center">Active Now</h2>
+                    <img src="icons/chart-line-variant.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
+                </div>
+
                 <h1 class="font-bold text-2xl pt-2">$Num</h1>
-                <p class="text-gray-500">'n' from last month</p>
+                <p class="pt-2 text-gray-500">'n' from last month</p>
             </div>
         </div>
         <div id="overview" class="flex flex-row mx-4">
-            <div id="chart" class="w-7/12 border-2 rounded-lg p-6">
-                <h1 class="font-bold text-lg">Overview</h1>
+            <div id="chart" class="w-7/12 border-2 rounded-lg px-6">
+                <h1 class="font-bold text-xl py-8">Overview</h1>
                 <canvas id="myChart" class="h-fit"></canvas>
             </div>
-            <div id="recent-sales" class="flex flex-col border-2 rounded-lg mx-4 p-6 w-5/12">
-                <h1 class="text-lg font-bold">Recent Sales</h1>
-                <h2 class="text-gray-500">You made N sales this month.</h2>
+            <div id="recent-sales" class="flex flex-col border-2 rounded-lg mx-4 px-6 w-5/12">
+                <h1 class="text-xl font-bold pt-8">Recent Sales</h1>
+                <h2 class="text-gray-500 pt-2 pb-6">You made N sales this month.</h2>
                 <ul id="recent-customers" class="flex flex-col">
                     <li id="rec-cus1" class="flex flex-row justify-between my-4">
-                        <img src="default-avatar.svg" class="flex h-8 w-8 self-center mr-4">
+                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
                         <div id="cus1-info" class="flex flex-col">
                             <p id="name-1">`{Customers'name}`</p>
-                            <p id="email-1">`{name@example.com}`</p>
+                            <p id="email-1" class="text-gray-500">`{name@example.com}`</p>
                         </div>
                         <div id="income-1" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
                         </div>
                     </li>
                     <li id="rec-cus2" class="flex flex-row justify-between my-4">
-                        <img src="default-avatar.svg" class="flex h-8 w-8 self-center mr-4">
+                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
                         <div id="cus2-info" class="flex flex-col">
                             <p id="name-2">`{Customers'name}`</p>
-                            <p id="email-2">`{name@example.com}`</p>
+                            <p id="email-2" class="text-gray-500">`{name@example.com}`</p>
                         </div>
                         <div id="income-2" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
                         </div>
                     </li>
                     <li id="rec-cus3" class="flex flex-row justify-between my-4">
-                        <img src="default-avatar.svg" class="flex h-8 w-8 self-center mr-4">
+                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
                         <div id="cus3-info" class="flex flex-col">
                             <p id="name-3">`{Customers'name}`</p>
-                            <p id="email-3">`{name@example.com}`</p>
+                            <p id="email-3" class="text-gray-500">`{name@example.com}`</p>
                         </div>
                         <div id="income-3" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
                         </div>
                     </li>
                     <li id="rec-cus4" class="flex flex-row justify-between my-4">
-                        <img src="default-avatar.svg" class="flex h-8 w-8 self-center mr-4">
+                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
                         <div id="cus4-info" class="flex flex-col">
                             <p id="name-4">`{Customers'name}`</p>
-                            <p id="email-4">`{name@example.com}`</p>
+                            <p id="email-4" class="text-gray-500">`{name@example.com}`</p>
                         </div>
                         <div id="income-4" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
                         </div>
                     </li>
                     <li id="rec-cus5" class="flex flex-row justify-between my-4">
-                        <img src="default-avatar.svg" class="flex h-8 w-8 self-center mr-4">
+                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
                         <div id="cus5-info" class="flex flex-col">
                             <p id="name-5">`{Customers'name}`</p>
-                            <p id="email-5">`{name@example.com}`</p>
+                            <p id="email-5" class="text-gray-500">`{name@example.com}`</p>
                         </div>
                         <div id="income-5" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
                         </div>
