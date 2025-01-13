@@ -51,8 +51,8 @@
                 <h1 class="font-bold text-4xl">Dashboard</h1>
             </div>
             <div id="calendar" class="flex ml-auto items-center">
-                <input type="date" id="date-range"
-                    class="rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">
+                <input type="date" id="today"
+                    class="appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">
             </div>
 
             <div id="download-butt" class="flex rounded-lg justify-self-end bg-black border-2 mx-2 px-4 items-center">
@@ -64,15 +64,19 @@
         </div>
         <div id="func-options" class="flex mt-8">
             <nav>
-                <ul class="flex ml-4 bg-gray-200 h-10 justify-start rounded-lg w-fit">
-                    <li class="inline px-2 rounded-lg border-2 font-bold bg-white self-center content-center h-10">
+                <ul class="flex ml-4 bg-gray-100 h-10 justify-start rounded-lg w-fit p-1 h-fit">
+                    <li
+                        class="inline px-4 rounded-lg border-2 font-bold bg-white self-center content-center h-10 border-gray-200">
                         <a href="index.html">Overview</a>
                     </li>
-                    <li class="inline px-2 rounded-lg border-2 text-gray-500 self-center self-center content-center">
+                    <li
+                        class="inline px-4 rounded-lg border-2 text-gray-500 self-center self-center content-center h-10 border-gray-100">
                         Analytics</li>
-                    <li class="inline px-2 rounded-lg border-2 text-gray-500 self-center self-center content-center">
+                    <li
+                        class="inline px-4 rounded-lg border-2 text-gray-500 self-center self-center content-center h-10 border-gray-100">
                         Reports</li>
-                    <li class="inline px-2 rounded-lg border-2 text-gray-500 self-center self-center content-center">
+                    <li
+                        class="inline px-4 rounded-lg border-2 text-gray-500 self-center self-center content-center h-10 border-gray-100">
                         Notifications</li>
                 </ul>
             </nav>
@@ -120,51 +124,56 @@
             </div>
             <div id="recent-sales" class="flex flex-col border-2 rounded-lg mx-4 px-6 w-5/12">
                 <h1 class="text-xl font-bold pt-8">Recent Sales</h1>
-                <h2 class="text-gray-500 pt-2 pb-6">You made N sales this month.</h2>
+                <h2 class="text-gray-500 pt-2 pb-4">You made N sales this month.</h2>
                 <ul id="recent-customers" class="flex flex-col">
-                    <li id="rec-cus1" class="flex flex-row justify-between my-4">
-                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
+                    <li id="rec-cus1" class="flex flex-row justify-between mb-6">
+                        <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus1-info" class="flex flex-col">
                             <p id="name-1">`{Customers'name}`</p>
                             <p id="email-1" class="text-gray-500">`{name@example.com}`</p>
                         </div>
-                        <div id="income-1" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
+                        <div id="income-1" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
+                            `{Value}`
                         </div>
                     </li>
-                    <li id="rec-cus2" class="flex flex-row justify-between my-4">
-                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
+                    <li id="rec-cus2" class="flex flex-row justify-between mb-6">
+                        <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus2-info" class="flex flex-col">
                             <p id="name-2">`{Customers'name}`</p>
                             <p id="email-2" class="text-gray-500">`{name@example.com}`</p>
                         </div>
-                        <div id="income-2" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
+                        <div id="income-2" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
+                            `{Value}`
                         </div>
                     </li>
-                    <li id="rec-cus3" class="flex flex-row justify-between my-4">
-                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
+                    <li id="rec-cus3" class="flex flex-row justify-between mb-6">
+                        <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus3-info" class="flex flex-col">
                             <p id="name-3">`{Customers'name}`</p>
                             <p id="email-3" class="text-gray-500">`{name@example.com}`</p>
                         </div>
-                        <div id="income-3" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
+                        <div id="income-3" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
+                            `{Value}`
                         </div>
                     </li>
-                    <li id="rec-cus4" class="flex flex-row justify-between my-4">
-                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
+                    <li id="rec-cus4" class="flex flex-row justify-between mb-6">
+                        <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus4-info" class="flex flex-col">
                             <p id="name-4">`{Customers'name}`</p>
                             <p id="email-4" class="text-gray-500">`{name@example.com}`</p>
                         </div>
-                        <div id="income-4" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
+                        <div id="income-4" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
+                            `{Value}`
                         </div>
                     </li>
-                    <li id="rec-cus5" class="flex flex-row justify-between my-4">
-                        <img src="icons/default-avatar.svg" class="flex h-10 w-10 self-center mr-4">
+                    <li id="rec-cus5" class="flex flex-row justify-between mb-6">
+                        <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus5-info" class="flex flex-col">
                             <p id="name-5">`{Customers'name}`</p>
                             <p id="email-5" class="text-gray-500">`{name@example.com}`</p>
                         </div>
-                        <div id="income-5" class="flex ml-auto justify-self-end font-bold self-center">+$ `{Value}`
+                        <div id="income-5" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
+                            `{Value}`
                         </div>
                     </li>
                 </ul>
@@ -176,9 +185,9 @@
 
 </html>
 <script>
-
+    document.getElementById('today').valueAsDate = new Date();
     const ctx = document.getElementById('myChart');
-
+    Chart.defaults.font.size = 16;
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -187,36 +196,44 @@
                 label: 'Overview',
                 data: [2700, 5400, 5700, 5600, 3100, 3750, 3600, 1600, 2100, 3300, 4300, 5900],
                 borderWidth: 1,
+                barPercentage: 0.95,
                 borderColor: '#000',
                 backgroundColor: '#000',
-                borderRadius: 4,
+                borderRadius: 6,
             }]
         },
         options: {
             plugins: {
                 legend: {
-                    display: false
+                    display: false,
                 },
             },
             scales: {
                 y: {
                     beginAtZero: true,
                     labelString: '$',
+                    border: {
+                        display: false,
+                    },
                     grid: {
                         display: false
                     },
                     ticks: {
+                        stepSize: 1500,
                         callback: function (value, index, ticks) {
                             return '$' + value;
                         }
                     },
                 },
                 x: {
+                    border: {
+                        display: false,
+                    },
                     grid: {
                         display: false
                     },
                 }
-            }
+            },
         }
     });
 </script>
