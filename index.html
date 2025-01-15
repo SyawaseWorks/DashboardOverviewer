@@ -14,7 +14,8 @@
     <div id="topbar"
         class="flex flex-row flex-nowrap flex-1 justify-items-stretch px-4 w-full border-slate-300 border-b-2 p-4">
         <div id="topbar-l" class="flex">
-            <div id="user" class="flex flex-row rounded-md font-bold w-60 border-2 border-slate-300">
+            <div id="user" class="flex flex-row rounded-md font-bold w-60 border-2 border-slate-300  justify-between">
+                <!--
                 <img src="icons/default-avatar.svg" alt="user" class="w-8 h-8 mx-2 self-center" />
                 <select class="appearance-none flex border-none rounded-md w-48 text-lg" id="context-switch">
                     <option value="default" selected>
@@ -23,7 +24,14 @@
                     <option value="value1">Value 1</option>
                     <option value="value2">Value 2</option>
                     <option value="value3">Value 3</option>
-                </select>
+                </select>-->
+                <button class="appearance-none flex border-none rounded-md w-48 text-lg  justify-between w-full"
+                    id="context-switch">
+                    <img src="icons/default-avatar.svg" alt="user" class="w-8 h-8 mx-2 self-center">
+                    <span class="flex text-nowrap self-center ml-2 justify-self-start">Alicia Koch</span>
+                    <img src="icons/arrows-up-down-svgrepo-com.svg"
+                        class="w-8 h-8 self-center justify-self-end ml-auto">
+                </button>
             </div>
             <div id="index-switch" class="inline px-2 content-center justify-center">
                 <nav>
@@ -48,11 +56,16 @@
     <div id="main-container" class="flex flex-col justify-center w-full px-8 py-8">
         <div id="titlebar" class="flex flex-row">
             <div id="title" class="justify-self-start">
-                <h1 class="font-bold text-4xl">Dashboard</h1>
+                <h1 class="font-bold text-4xl ml-4">Dashboard</h1>
             </div>
             <div id="calendar" class="flex ml-auto items-center">
-                <input type="date" id="today"
-                    class="appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">
+                <!--<input type="date" id="today"
+                    class="appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">-->
+                <button id="dateselect"
+                    class="flex appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">
+                    <img src="icons/Calendar-icon.svg" class="h-4 w-4 justify-self-start self-center">
+                    <span class="pl-4">Jan 20,2022- Feb 9,2022</span>
+                </button>
             </div>
 
             <div id="download-butt" class="flex rounded-lg justify-self-end bg-black border-2 mx-2 px-4 items-center">
@@ -84,96 +97,102 @@
         <div id="info-section" class="flex flex-row m-4">
             <div id="totalrevenue" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
                 <div class="flex flex-row space-between">
-                    <h2 class="flex self-center">Total Revenue</h2>
+                    <h2 class="flex self-center font-bold">Total Revenue</h2>
                     <img src="icons/dollar-svgrepo-com.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
                 </div>
-                <h1 class="font-bold text-2xl pt-2">$Num</h1>
-                <p class="pt-2 text-gray-500">'n' from last month</p>
+                <h1 class="font-bold text-3xl pt-2">$45,231.89</h1>
+                <p class="text-gray-500">+20.1% from last month</p>
             </div>
+
             <div id="subscripitons" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
                 <div class="flex flex-row space-between">
-                    <h2 class="flex self-center">Subscripitone</h2>
+                    <h2 class="flex self-center font-bold">Subscripitone</h2>
                     <img src="icons/users-svgrepo-com.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
                 </div>
-                <h1 class="font-bold text-2xl pt-2">Num</h1>
-                <p class="pt-2 text-gray-500">'n' from last month</p>
+                <h1 class="font-bold text-3xl pt-2">+2350</h1>
+                <p class="text-gray-500">+180.1% from last month</p>
             </div>
+
             <div id="sales" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
                 <div class="flex flex-row space-between">
-                    <h2 class="flex self-center">Sales</h2>
+                    <h2 class="flex self-center font-bold">Sales</h2>
                     <img src="icons/hamburger-svgrepo-com.svg"
                         class="flex self-center w-8 h-8 justify-self-end ml-auto">
                 </div>
-                <h1 class="font-bold text-2xl pt-2">Num</h1>
-                <p class="pt-2 text-gray-500">'n' from last month</p>
+
+                <h1 class="font-bold text-3xl pt-2">+12,234</h1>
+                <p class="text-gray-500">+19% from last month</p>
             </div>
+
             <div id="activenow" class="flex flex-col mr-6 rounded-lg border-2 w-1/4 p-6">
                 <div class="flex flex-row space-between">
-                    <h2 class="flex self-center">Active Now</h2>
+                    <h2 class="flex self-center font-bold">Active Now</h2>
                     <img src="icons/chart-line-variant.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
                 </div>
 
-                <h1 class="font-bold text-2xl pt-2">Num</h1>
-                <p class="pt-2 text-gray-500">'n' from last month</p>
+                <h1 class="font-bold text-3xl pt-2">+573</h1>
+                <p class="text-gray-500">+201 from last month</p>
             </div>
         </div>
+
+
         <div id="overview" class="flex flex-row mx-4">
             <div id="chart" class="w-7/12 border-2 rounded-lg px-6">
                 <h1 class="font-bold text-xl py-8">Overview</h1>
-                <canvas id="myChart" class="h-fit"></canvas>
+                <canvas id="myChart" class="h-fit pb-8"></canvas>
             </div>
-            <div id="recent-sales" class="flex flex-col border-2 rounded-lg mx-4 px-6 w-5/12">
+            <div id="recent-sales" class="flex flex-col border-2 rounded-lg mx-6 px-8 w-5/12">
                 <h1 class="text-xl font-bold pt-8">Recent Sales</h1>
-                <h2 class="text-gray-500 pt-2 pb-4">You made N sales this month.</h2>
+                <h2 class="text-gray-500 pt-2 pb-6">You made 265 sales this month.</h2>
                 <ul id="recent-customers" class="flex flex-col">
-                    <li id="rec-cus1" class="flex flex-row justify-between mb-6">
+                    <li id="rec-cus1" class="flex flex-row justify-between mb-8">
                         <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus1-info" class="flex flex-col">
-                            <p id="name-1">`{Customers'name}`</p>
-                            <p id="email-1" class="text-gray-500">`{name@example.com}`</p>
+                            <p id="name-1">Olivia Martin</p>
+                            <p id="email-1" class="text-gray-500">olivia.martin@example.com</p>
                         </div>
-                        <div id="income-1" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
-                            `{Value}`
+                        <div id="income-1" class="flex ml-auto justify-self-end font-bold self-center text-xl">
+                            +$1,999.00
                         </div>
                     </li>
-                    <li id="rec-cus2" class="flex flex-row justify-between mb-6">
+                    <li id="rec-cus2" class="flex flex-row justify-between mb-8">
                         <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus2-info" class="flex flex-col">
-                            <p id="name-2">`{Customers'name}`</p>
-                            <p id="email-2" class="text-gray-500">`{name@example.com}`</p>
+                            <p id="name-2">Jackson Lee</p>
+                            <p id="email-2" class="text-gray-500">jackson.lee@example.com</p>
                         </div>
-                        <div id="income-2" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
-                            `{Value}`
+                        <div id="income-2" class="flex ml-auto justify-self-end font-bold self-center text-xl">
+                            +$39.00
                         </div>
                     </li>
-                    <li id="rec-cus3" class="flex flex-row justify-between mb-6">
+                    <li id="rec-cus3" class="flex flex-row justify-between mb-8">
                         <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus3-info" class="flex flex-col">
-                            <p id="name-3">`{Customers'name}`</p>
-                            <p id="email-3" class="text-gray-500">`{name@example.com}`</p>
+                            <p id="name-3">Isabella Nguyen</p>
+                            <p id="email-3" class="text-gray-500">isabella.nguyen@example.com</p>
                         </div>
-                        <div id="income-3" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
-                            `{Value}`
+                        <div id="income-3" class="flex ml-auto justify-self-end font-bold self-center text-xl">
+                            +$299.00
                         </div>
                     </li>
-                    <li id="rec-cus4" class="flex flex-row justify-between mb-6">
+                    <li id="rec-cus4" class="flex flex-row justify-between mb-8">
                         <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus4-info" class="flex flex-col">
-                            <p id="name-4">`{Customers'name}`</p>
-                            <p id="email-4" class="text-gray-500">`{name@example.com}`</p>
+                            <p id="name-4">William Kim</p>
+                            <p id="email-4" class="text-gray-500">will@example.com</p>
                         </div>
-                        <div id="income-4" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
-                            `{Value}`
+                        <div id="income-4" class="flex ml-auto justify-self-end font-bold self-center text-xl">
+                            +$99.00
                         </div>
                     </li>
-                    <li id="rec-cus5" class="flex flex-row justify-between mb-6">
+                    <li id="rec-cus5" class="flex flex-row justify-between mb-8">
                         <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
                         <div id="cus5-info" class="flex flex-col">
-                            <p id="name-5">`{Customers'name}`</p>
-                            <p id="email-5" class="text-gray-500">`{name@example.com}`</p>
+                            <p id="name-5">Sofia Davis</p>
+                            <p id="email-5" class="text-gray-500">sofia.davis@example.com</p>
                         </div>
-                        <div id="income-5" class="flex ml-auto justify-self-end font-bold self-center text-xl">+$
-                            `{Value}`
+                        <div id="income-5" class="flex ml-auto justify-self-end font-bold self-center text-xl">
+                            +$39.00
                         </div>
                     </li>
                 </ul>
@@ -185,7 +204,7 @@
 
 </html>
 <script>
-    document.getElementById('today').valueAsDate = new Date();
+    //document.getElementById('today').valueAsDate = new Date();
     const ctx = document.getElementById('myChart');
     Chart.defaults.font.size = 16;
     new Chart(ctx, {
