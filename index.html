@@ -36,17 +36,18 @@
             <div id="index-switch" class="inline px-2 content-center justify-center">
                 <nav>
                     <ul>
-                        <li class="inline px-2 text-lg"><a href="index.html">Overview</a></li>
-                        <li class="inline px-2 text-lg text-gray-500">Customers</li>
-                        <li class="inline px-2 text-lg text-gray-500">Products</li>
-                        <li class="inline px-2 text-lg text-gray-500">Setting</li>
+                        <li class="inline px-2 text-lg"><a href="index.html">总览</a></li>
+                        <li class="inline px-2 text-lg text-gray-500">客户</li>
+                        <li class="inline px-2 text-lg text-gray-500">产品</li>
+                        <li class="inline px-2 text-lg text-gray-500">设置</li>
                     </ul>
                 </nav>
             </div>
         </div>
         <div id="topbar-r" class="flex ml-auto">
             <div id="search-content" class="flex items-center">
-                <input type="text" id="search" placeholder="Search..." class="rounded-md w-80 text-lg border-slate-300">
+                <input type="text" id="search" placeholder="请输入搜索内容..."
+                    class="rounded-md w-80 text-lg border-slate-300">
             </div>
             <div id="avatar" class="flex items-center pl-4">
                 <img src="icons/default-avatar.svg" class="h-10 w-10">
@@ -56,22 +57,23 @@
     <div id="main-container" class="flex flex-col justify-center w-full px-8 py-8">
         <div id="titlebar" class="flex flex-row">
             <div id="title" class="justify-self-start">
-                <h1 class="font-bold text-4xl ml-4">Dashboard</h1>
+                <h1 class="font-bold text-4xl ml-4">数据展板</h1>
             </div>
             <div id="calendar" class="flex ml-auto items-center">
                 <!--<input type="date" id="today"
                     class="appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">-->
                 <button id="dateselect"
-                    class="flex appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">
+                    class="flex appearance-none rounded-lg border-2 px-4 py-2 w-fit cursor-pointer bg-white text-gray-700">
                     <img src="icons/Calendar-icon.svg" class="h-4 w-4 justify-self-start self-center">
-                    <span class="pl-4">Jan 20,2022- Feb 9,2022</span>
+                    <!--<span class="pl-4">Jan 20,2022- Feb 9,2022</span>-->
+                    <span class="pl-4 flex text-nowrap">2022年/1月/20日 - 2022年/2月/09日</span>
                 </button>
             </div>
 
             <div id="download-butt" class="flex rounded-lg justify-self-end bg-black border-2 mx-2 px-4 items-center">
                 <button class="text-white flex flex-row items-center space-x-4"><img src="icons/download-button.svg"
                         class="h-5 w-5">
-                    <p>Download</p>
+                    <p>下载</p>
                 </button>
             </div>
         </div>
@@ -80,70 +82,70 @@
                 <ul class="flex ml-4 bg-gray-100 h-10 justify-start rounded-lg w-fit p-1 h-fit">
                     <li
                         class="inline px-4 rounded-lg border-2 font-bold bg-white self-center content-center h-10 border-gray-200">
-                        <a href="index.html">Overview</a>
+                        <a href="index.html">总览</a>
                     </li>
                     <li
                         class="inline px-4 rounded-lg border-2 text-gray-500 self-center self-center content-center h-10 border-gray-100">
-                        Analytics</li>
+                        分析</li>
                     <li
                         class="inline px-4 rounded-lg border-2 text-gray-500 self-center self-center content-center h-10 border-gray-100">
-                        Reports</li>
+                        报告</li>
                     <li
                         class="inline px-4 rounded-lg border-2 text-gray-500 self-center self-center content-center h-10 border-gray-100">
-                        Notifications</li>
+                        通知</li>
                 </ul>
             </nav>
         </div>
         <div id="info-section" class="flex flex-row m-4">
             <div id="totalrevenue" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
                 <div class="flex flex-row space-between">
-                    <h2 class="flex self-center font-bold">Total Revenue</h2>
+                    <h2 class="flex self-center font-bold">总收入</h2>
                     <img src="icons/dollar-svgrepo-com.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
                 </div>
                 <h1 class="font-bold text-3xl pt-2">$45,231.89</h1>
-                <p class="text-gray-500">+20.1% from last month</p>
+                <p class="text-gray-500">+20.1% 对比上月</p>
             </div>
 
             <div id="subscripitons" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
                 <div class="flex flex-row space-between">
-                    <h2 class="flex self-center font-bold">Subscripitone</h2>
+                    <h2 class="flex self-center font-bold">订阅数</h2>
                     <img src="icons/users-svgrepo-com.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
                 </div>
                 <h1 class="font-bold text-3xl pt-2">+2350</h1>
-                <p class="text-gray-500">+180.1% from last month</p>
+                <p class="text-gray-500">+180.1% 对比上月</p>
             </div>
 
             <div id="sales" class="flex flex-col mr-4 rounded-lg border-2 w-1/4 p-6">
                 <div class="flex flex-row space-between">
-                    <h2 class="flex self-center font-bold">Sales</h2>
+                    <h2 class="flex self-center font-bold">成交量</h2>
                     <img src="icons/hamburger-svgrepo-com.svg"
                         class="flex self-center w-8 h-8 justify-self-end ml-auto">
                 </div>
 
                 <h1 class="font-bold text-3xl pt-2">+12,234</h1>
-                <p class="text-gray-500">+19% from last month</p>
+                <p class="text-gray-500">+19% 对比上月</p>
             </div>
 
             <div id="activenow" class="flex flex-col mr-6 rounded-lg border-2 w-1/4 p-6">
                 <div class="flex flex-row space-between">
-                    <h2 class="flex self-center font-bold">Active Now</h2>
+                    <h2 class="flex self-center font-bold">当前活跃人数</h2>
                     <img src="icons/chart-line-variant.svg" class="flex self-center w-8 h-8 justify-self-end ml-auto">
                 </div>
 
                 <h1 class="font-bold text-3xl pt-2">+573</h1>
-                <p class="text-gray-500">+201 from last month</p>
+                <p class="text-gray-500">+201 对比前一小时</p>
             </div>
         </div>
 
 
         <div id="overview" class="flex flex-row mx-4">
             <div id="chart" class="w-7/12 border-2 rounded-lg px-6">
-                <h1 class="font-bold text-xl py-8">Overview</h1>
+                <h1 class="font-bold text-xl py-8">数据总览</h1>
                 <canvas id="myChart" class="h-fit pb-8"></canvas>
             </div>
             <div id="recent-sales" class="flex flex-col border-2 rounded-lg mx-6 px-8 w-5/12">
-                <h1 class="text-xl font-bold pt-8">Recent Sales</h1>
-                <h2 class="text-gray-500 pt-2 pb-6">You made 265 sales this month.</h2>
+                <h1 class="text-xl font-bold pt-8">近期成交</h1>
+                <h2 class="text-gray-500 pt-2 pb-6">您本月成交量为 265.</h2>
                 <ul id="recent-customers" class="flex flex-col">
                     <li id="rec-cus1" class="flex flex-row justify-between mb-8">
                         <img src="icons/default-avatar.svg" class="flex h-12 w-12 self-center mr-4">
@@ -210,7 +212,8 @@
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            //labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            labels: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
             datasets: [{
                 label: 'Overview',
                 data: [2700, 5400, 5700, 5600, 3100, 3750, 3600, 1600, 2100, 3300, 4300, 5900],
