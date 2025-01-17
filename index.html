@@ -5,13 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overview</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
     <script
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        $(function () {
+            $("#from").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 3,
+                onClose: function (selectedDate) {
+                    $("#to").datepicker("option", "minDate", selectedDate);
+                }
+            });
+            $("#to").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 3,
+                onClose: function (selectedDate) {
+                    $("#from").datepicker("option", "maxDate", selectedDate);
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -66,7 +82,8 @@
             <div id="title" class="justify-self-start">
                 <h1 class="font-bold text-4xl ml-4">数据展板</h1>
             </div>
-            <div id="calendar" class="flex ml-auto items-center">
+            <div id="calendar"
+                class="flex ml-auto items-center appearance-none rounded-lg border-2 px-4 w-80 cursor-pointer w-fit">
                 <!--<input type="date" id="today"
                     class="appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">
                 <button id="dateselect"
@@ -74,9 +91,11 @@
                     <img src="icons/Calendar-icon.svg" class="h-4 w-4 justify-self-start self-center">
                     <span class="pl-4">Jan 20,2022- Feb 9,2022</span>
                     <span class="pl-4 flex text-nowrap">2022年/1月/20日 - 2022年/2月/09日</span></button>-->
-                <input type="date" id="today"
-                    class="appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">
-
+                <!--<input type="date" id="today"
+                    class="appearance-none rounded-lg border-2 px-4 py-2 w-80 cursor-pointer bg-white text-gray-700">-->
+                <input type="date" id="from" name="from" class="border-none bg-white text-gray-700">
+                <label for="to" class="mx-4 text-xl">-</label>
+                <input type="date" id="to" name="to" class="border-none bg-white text-gray-700">
             </div>
 
             <div id="download-butt"
@@ -216,10 +235,6 @@
 
 </html>
 <script>
-    //calendar
-    $(function () {
-        $("#datepicker").datepicker();
-    });
     document.getElementById('today').valueAsDate = new Date();
     const ctx = document.getElementById('myChart');
     Chart.defaults.font.size = 16;
